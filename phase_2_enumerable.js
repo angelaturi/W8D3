@@ -48,13 +48,13 @@ Array.prototype.myReduce = function(callback, init) {
     return init;
 }
 
-console.log([1, 2, 3].myReduce(function (acc, el) {
-    return acc + el;
-}));
+// console.log([1, 2, 3].myReduce(function (acc, el) {
+//     return acc + el;
+// }));
 
-console.log([1, 2, 3].myReduce(function (acc, el) {
-    return acc + el;
-}, 25));
+// console.log([1, 2, 3].myReduce(function (acc, el) {
+//     return acc + el;
+// }, 25));
 
 
 // const numbers = [1, 2, 3, 4]
