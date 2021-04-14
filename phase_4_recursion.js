@@ -136,4 +136,18 @@ function mergeSort(arr) {
   return merge(left, right);
 }
 
-console.log(mergeSort([5,2,7,6,4,8,4]));
+// console.log(mergeSort([5,2,7,6,4,8,4]));
+
+function subSets(arr) {
+  if (arr.length < 2) {
+    return [arr];
+  }
+
+  let nextLevel = subSets(arr.slice(1))
+  for(ele of arr) {
+    nextLevel.push(arr.slice(0, arr.indexOf(ele)+1));
+  }
+  return nextLevel;
+}
+
+// console.log(subSets([1,2,3,4]));
