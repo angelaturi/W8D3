@@ -31,8 +31,31 @@ Array.prototype.myMap = function(callback) {
 // console.log([1,2,3,4].myMap(function(a){return a*400}))
 
 Array.prototype.myReduce = function(callback, init) {
-    // start by setting arr = this
-    // check to see if init === undefined
-        // init = arr[0]
-        // arr = arr.slice(1)
+//     // start by setting arr = this
+//     // check to see if init === undefined
+//         // init = arr[0]
+//         // arr = arr.slice(1)
+
+    let arr = this;
+    if (init === undefined) {
+        init = arr[0];
+        arr = arr.slice(1);
+    }
+
+    arr.myEach(function(ele) {
+        init = callback(init, ele)
+    });
+    return init;
 }
+
+console.log([1, 2, 3].myReduce(function (acc, el) {
+    return acc + el;
+}));
+
+console.log([1, 2, 3].myReduce(function (acc, el) {
+    return acc + el;
+}, 25));
+
+
+// const numbers = [1, 2, 3, 4]
+// console.log(numbers.slice(1));
