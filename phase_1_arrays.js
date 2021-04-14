@@ -37,4 +37,4 @@ Array.prototype.transpose = function() {
   return result;
 }
 
-console.log([[1,1],[0,0],[2,2]].transpose())
+// console.log([[1,1],[0,0],[2,2]].transpose())
